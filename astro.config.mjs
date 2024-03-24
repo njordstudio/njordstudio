@@ -4,5 +4,5 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://njordstudio.github.io',
-  // base: '/dist',
+  base: 'njordstudio',
 })
