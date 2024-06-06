@@ -1,47 +1,17 @@
 ---
-import '../style/main.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = "Welcome to NJORD!";
 ---
 
+<BaseLayout title={title}>
+    <h2>My awesome blog subtitle</h2>
 
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="generator" content={Astro.generator} />
-    <meta name="description" content="Freelance 3D, Animation and Web3D studio.">
-    <meta name="copyright"content="NJORD Studio AB">
-    <meta name="keywords" content="3D, Animation, Web3D, VFX"/>
-    <title>NJORD</title>
-
-    <!-- SOME -->
-    <meta property="og:title" content="NJORD" />
-    <meta property="og:description" content="Freelance 3D, Animation and Web3D studio." />
-    <meta property="og:type" content="website" />
-    <!-- <meta property="og:url" content="https://www.example.com/page-url" /> -->
-    <!-- <meta property="og:image" content="https://www.example.com/image.jpg" /> -->
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-	</head>
-	<body>
     <div class="container">
 
-      <div class="top">
-        <h1>Welcome to NJORD!</h1>
-        <br />
-        <h2>Page is under construction!</h2>
-      </div>
-      <div class="bottom">
-        <br />
-        <h3>Contact me:</h3>
-        <a href="mailto:fredrik@njordstudio.com?subject=Hello!">E-mail me something fun.</a>
-        <a href="tel:+1234567890">Hear my voice +46 (0) 733 600 080</a>
-      </div>
+        <div class="top">
+            <br />
+            <h2>Page is under construction!</h2>
+        </div>
     </div>
-	</body>
-</html>
+
+</BaseLayout>

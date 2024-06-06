@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "About Me";
+
+const identity = {
+  firstName: "Sarah",
+  country: "Sweden",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+---
+
+<BaseLayout title={title}>
+
+    <h2>... and my new Astro site!</h2>
+
+    <p>Here are a few facts about me:</p>
+    <ul>
+        <li>My name is {identity.firstName}.</li>
+        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+        {identity.hobbies.length >= 2 &&
+        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+    }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+
+    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+
+    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+
+    <div class="bottom">
+        <br />
+        <h3>Contact me:</h3>
+        <a href="mailto:fredrik@njordstudio.com?subject=Hello!">E-mail me something fun.</a>
+        <a href="tel:+1234567890">Hear my voice +46 (0) 733 600 080</a>
+    </div>
+
+</BaseLayout>
