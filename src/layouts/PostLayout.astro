@@ -1,19 +1,17 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 
-
-const { frontmatter, picture } = Astro.props;
-console.log(frontmatter)
+const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title={'test'}>
+<BaseLayout frontmatter={frontmatter}>
     <article class="stories">
         <p>Written by: {frontmatter.author}</p>
         <p>Published: {frontmatter.date.toString().slice(0,10)}</p>
         <p><em>{frontmatter.description}</em></p>
-        <img src={picture.url} width="300" alt={picture.alt} />
 
         <slot />
+
     </article>
 
 </BaseLayout>

@@ -11,4 +11,12 @@ export default defineConfig({
   image: {
     service: squooshImageService(),
   },
+  // Workaround to fix bug in WSL
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
+  },
 });
