@@ -3,13 +3,13 @@ import '../style/main.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const { title } = Astro.props;
-// console.log("Baselayout frontmatter: ", frontmatter);
+const { frontmatter, title } = Astro.props;
+console.log("Baselayout frontmatter: ", frontmatter);
 ---
 
 <Header />
     <section class="container">
-        <h1>{title}</h1>
+        <h1>{title || frontmatter.title}</h1>
         <slot />
     </section>
 <Footer />
