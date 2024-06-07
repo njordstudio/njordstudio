@@ -2,19 +2,36 @@
 import Social from './Social.astro';
 ---
 
-<footer>
+        <footer>
+            <div class="footerContainer">
+                <h3>Contact me:</h3>
+                <a href="mailto:fredrik@njordstudio.com?subject=Hello!">E-mail (fredrik@njordstudio.com).</a>
+                <br />
+                <a href="tel:+1234567890">Phone (+46 (0) 733 600 080).</a>
+            </div>
 
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+            <div class="footerContainer">
+                <h3>Follow me:</h3>
+                <Social platform="Instagram" username="njord_studio" />
+                <!-- <Social platform="Cara" username="fredriksvard" /> -->
+                <Social platform="Github" username="sirhaffy" />
+                <!-- <Social platform="Youtube" username="njordstudio" /> -->
+            </div>
 
-</footer>
+            <!-- <h3>Newsletter Signup:</h3>
+            <p>You email here</p> -->
+
+            <div class="footerBottomText">
+                <!-- <p>RSS-feed</p> -->
+                <p class="smallText">© 2024 Njord Studio AB. All Rights Reserved.</p>
+            </div>
+        </footer>
 
 
-<script>
-    import "../scripts/menu.js";
-</script>
+        <script>
+            import "../scripts/menu.js";
+        </script>
 
-</body>
+    </body>
 
 </html>

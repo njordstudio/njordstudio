@@ -4,42 +4,71 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const title = "About Me";
 
 const identity = {
-  firstName: "Sarah",
+  firstName: "Fredrik",
   country: "Sweden",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
+  occupation: "Freelancer",
+  hobbies: ["snowboarding", "ocean", "outdoor activities"],
+  education: ["React JS Framework - Folkuniversitetet (2022)",
+  "Berghs School of Communication - Art Direction (2015)",
+  "Forsbergs Skola - Grafisk Design (2014)"],
+  awards: ["First prize - Full page ad - Issued by Borås Tidning Din bästa sida 2021", "Silver in ANA International Echo Awards 2021.",]
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const clients = ["Didriksson (CG/Photo)", "ACG Pulse (Photo)", "Esoft (Photo)", "High End Media Group (CG)", "Jensen (CG)", "CGI (CG)", "SunOff (CG)", "Hemtex (Photo assistant)", "Ellos (Photo assistant)", "Vyonyx (CG)", "Beyond (CG)", "Rekotex (Web)", "Autocirc (Web)", "Hööks (Web)", "Life (Web)"];
 
+const skillsCg = ["Modelling", "Lighting", "Shading", "UV Mapping", "Photoshop", "Blender", "Maya", "Unity", "Unreal Engine", "Substance Designer", "HDRI creation"];
+
+const skillsWeb = ["React", "JavaScript", "HTML", "CSS", "SASS", "Linaria", "TailwindCSS", "Bootstrap", "Next.js", "Node.js", "Astro.js", "GraphQL", "REST", "WordPress", "PHP", "Git", "GitHub", "GitLab", "Figma", "Norce"];
+
+const skillsPhoto = ["Studio lighting", "Web Developer", "Photographer"];
 ---
 
 <BaseLayout title={title}>
 
-    <h2>... and my new Astro site!</h2>
-
-    <p>Here are a few facts about me:</p>
-    <ul>
-        <li>My name is {identity.firstName}.</li>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-    }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-        {skills.map((skill) => <li>{skill}</li>)}
-    </ul>
-
-    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-
-    <div class="bottom">
+    <p>
+        It all began with a dream of documenting and telling stories through my camera. As life unfolded and children came into the picture, I began blending photography with CG elements, working towards telling stories in a digital world. Simultaneously, my web development skills, initially honed for personal projects, quickly gained recognition, leading to a professional career as a 3D Generalist and Web Developer. This dual expertise provided a perfect balance for raising a family and renovating our home.
         <br />
-        <h3>Contact me:</h3>
-        <a href="mailto:fredrik@njordstudio.com?subject=Hello!">E-mail me something fun.</a>
-        <a href="tel:+1234567890">Hear my voice +46 (0) 733 600 080</a>
-    </div>
+        <br />
+        Now, with the kids grown and with our recent move to the mountain town of Åre, Sweden, I find myself returning to my roots in storytelling, dedicated to capturing engaging and memorable narratives.
+        <br />
+        <br />
+        As a freelancer operating under my own company, Njord Studio, I am available for work as a 3D Generalist, Front-end Developer, and for photography projects.  If you seek a versatile professional committed to delivering great work, I stand ready to lend my expertise.
+    </p>
 
+    <!-- <p>Clients I worked with:</p>
+    <p class="skillCloud">
+        {clients.map((client, index) => (
+            <span key={index}>{client}{index !== clients.length - 1 ? '∙' : ''}</span>
+        ))}
+    </p> -->
+
+    <!-- <p>CG skills:</p>
+    <p class="skillCloud">
+        {skillsCg.map((cgskill, index) => (
+            <span key={index}>{cgskill}{index !== skillsCg.length - 1 ? '∙' : ''}</span>
+        ))}
+    </p>
+
+    <p>Web development skills:</p>
+    <p class="skillCloud">
+        {skillsWeb.map((webskill, index) => (
+            <span key={index}>{webskill}{index !== skillsWeb.length - 1 ? '∙' : ''}</span>
+        ))}
+    </p> -->
+
+    <!-- <p>Edcation:</p>
+    <p class="skillCloud">
+        {identity.education.map((education, index) => (
+            <span key={index}>{education}{index !== identity.education.length - 1 ? '∙' : ''}</span>
+        ))}
+    </p>
+
+    <p>Awards:</p>
+    <p class="skillCloud">
+        {identity.awards.map((awards, index) => (
+            <span key={index}>{awards}{index !== identity.awards.length - 1 ? '∙' : ''}</span>
+        ))}
+    </p> -->
+
+    <!-- <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li> -->
 </BaseLayout>
