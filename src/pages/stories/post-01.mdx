@@ -11,7 +11,12 @@ tags: ["astro", "blogging", "learning in public"]
 ---
 
 import { Picture } from "astro:assets";
+import { Image } from 'astro:assets';
 import PostLayout from "../../layouts/PostLayout.astro";
+
+import blurHashedImage from "../../components/blurHashedImage";
+
+
 import image01 from "../../images/my-hero.jpg";
 import image02 from "../../images/last_blue_rays_of_light.jpg";
 
@@ -27,14 +32,20 @@ import image02 from "../../images/last_blue_rays_of_light.jpg";
 
     This way sounds egocentric to me, but I wish he would have got a couple more years of health as we all could have learned so much from him. Not only from his knowledge of tools and stuff like that but also as a man living with his wife on the land they owned and cared for.
 
-    <Picture
-        src={image01}
+    {/* ![Me and my grandfather](../../images/last_blue_rays_of_light.jpg) */}
+
+    {/* <Picture src={image02} formats={['avif', 'webp']} alt="A description of my image." /> */}
+
+    {/* <Image
+        src={`data:image/jpeg;base64,${generate(image02)}`}
+        width={image02.width / 2}
+        densities={[1.5, 2]}
         alt="A description of my image."
-        formats={['avif', 'webp']}
         loading="lazy"
-        widths={[240, 540, 720, image01.width]}
-        sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, ${image01.width}px`}
-     />
+    /> */}
+
+    <blurHashedImage image={image02} alt="Description of image" />
+
 
     I am talking about my grandfather, my hero.
 

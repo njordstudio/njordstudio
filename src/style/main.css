@@ -424,6 +424,7 @@ footer .footerBottomText a {
 }
 
 .articleItem {
+    opacity: 0; /* To fix flash of site before gsap animation. */
     display: flex;
     flex-direction: column;
     justify-content: top;

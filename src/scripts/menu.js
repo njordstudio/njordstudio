@@ -14,29 +14,36 @@ document.querySelector('.hamburger').addEventListener('click', () => {
 
 
 // Animation for article items
-gsap.from('.articleItem', {
-    opacity: 0,
-    y: 50,
-    duration: 0.5,
-    stagger: 0.1,
-    ease: 'power2.out'
-});
+if (document.querySelector('.articleItem')) {
 
-document.querySelectorAll('.articleItem').forEach(item => {
-    item.addEventListener('mouseover', () => {
-        item.querySelector('.articleImg').style.height = '0';
-        item.querySelector('.articleDescription').style.display = 'block';
-        item.querySelector('.articleAuthor').style.display = 'none'; // Add this line to hide articleAuthor
-        item.querySelector('.articleImg').style.transition = 'height 0.2s'; // Add this line for smooth transition
+
+    gsap.set(".articleItem", { autoAlpha: 1 });
+
+    gsap.from('.articleItem', {
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        stagger: 0.2,
+        ease: 'power2.out',
+        delay: 0.3
     });
 
-    item.addEventListener('mouseout', () => {
-        item.querySelector('.articleImg').style.height = '150px';
-        item.querySelector('.articleDescription').style.display = 'none';
-        item.querySelector('.articleAuthor').style.display = 'block'; // Add this line to show articleAuthor
-        item.querySelector('.articleImg').style.transition = 'height 0.2s'; // Add this line for smooth transition
+    document.querySelectorAll('.articleItem').forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.querySelector('.articleImg').style.height = '0';
+            item.querySelector('.articleDescription').style.display = 'block';
+            item.querySelector('.articleAuthor').style.display = 'none'; // Add this line to hide articleAuthor
+            item.querySelector('.articleImg').style.transition = 'height 0.2s'; // Add this line for smooth transition
+        });
+
+        item.addEventListener('mouseout', () => {
+            item.querySelector('.articleImg').style.height = '150px';
+            item.querySelector('.articleDescription').style.display = 'none';
+            item.querySelector('.articleAuthor').style.display = 'block'; // Add this line to show articleAuthor
+            item.querySelector('.articleImg').style.transition = 'height 0.2s'; // Add this line for smooth transition
+        });
     });
-});
+}
 
 // Transition between pages
 document.querySelectorAll('.articleItem').forEach(link => {
