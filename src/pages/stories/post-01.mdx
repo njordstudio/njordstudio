@@ -3,22 +3,19 @@ title: "My hero"
 author: "Fredrik Svärd"
 date: 2018-01-01
 description: "Memories of my hero."
-# todo: Can this be the thumbnail?
+# todo: Fix the thumbnail.
 image:
     url: "https://docs.astro.build/assets/arc.webp"
-    alt: "Thumbnail of Astro arcs."
-tags: ["astro", "blogging", "learning in public"]
+    alt: "todo - preview post image."
+tags: ["todo", "todo", "todo"]
 ---
 
-import { Picture } from "astro:assets";
-import { Image } from 'astro:assets';
 import PostLayout from "../../layouts/PostLayout.astro";
+import { Image } from "@unpic/astro";
 
-import blurHashedImage from "../../components/blurHashedImage";
-
-
-import image01 from "../../images/my-hero.jpg";
+import image01 from "https://njordstudioab-776988930.imgix.net/images/my-hero.jpg";
 import image02 from "../../images/last_blue_rays_of_light.jpg";
+import image03 from "../../images/sommar.jpg";
 
 <PostLayout frontmatter={frontmatter}>
 
@@ -34,18 +31,15 @@ import image02 from "../../images/last_blue_rays_of_light.jpg";
 
     {/* ![Me and my grandfather](../../images/last_blue_rays_of_light.jpg) */}
 
-    {/* <Picture src={image02} formats={['avif', 'webp']} alt="A description of my image." /> */}
+    {/* <BlurHashedImage src={image01} alt="My Image" client:load /> */}
 
-    {/* <Image
-        src={`data:image/jpeg;base64,${generate(image02)}`}
-        width={image02.width / 2}
-        densities={[1.5, 2]}
-        alt="A description of my image."
-        loading="lazy"
-    /> */}
-
-    <blurHashedImage image={image02} alt="Description of image" />
-
+    <Image
+        src={image01}
+        alt="Me and my grandfather"
+        width={800}
+        height={600}
+        placeholder="blurhash"
+    />
 
     I am talking about my grandfather, my hero.
 

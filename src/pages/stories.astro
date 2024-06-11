@@ -9,7 +9,7 @@ const title = 'Stories';
     <div class="articlesList">
 
         {allPosts.map((story) => (
-            <a href={story.url} class="articleItem" key={story.url}>
+            <a href={story.url} class="articleItem">
             <img class="articleImg" src={story.frontmatter.image.url} alt={story.frontmatter.image.alt} />
             <div class="articleItemInfo">
                 <h2>{story.frontmatter.title}</h2>

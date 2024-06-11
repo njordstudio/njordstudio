@@ -1,5 +1,6 @@
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import { imageService } from "@unpic/astro/service";
 
 
 
@@ -9,7 +10,11 @@ export default defineConfig({
   integrations: [mdx()],
   output: 'static',
   image: {
-    service: squooshImageService(),
+    service: imageService({
+      fallbackService: "squooshImageService",
+      placeholder: "blurhash",
+      layout: "constrained",
+    }),
   },
   // Workaround to fix bug in WSL
   vite: {
