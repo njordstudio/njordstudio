@@ -1,13 +1,16 @@
 ---
 import Social from './Social.astro';
+import njordLogo from "/src/assets/logo/NJORDSTUDIO_logo_white.svg";
 ---
 
         <footer>
+            <img class="footerLogo" src={njordLogo.src} alt="Logo" style="width: 300px; height: auto;" />
+
             <div class="footerContainer">
                 <h3>Contact me:</h3>
-                <a href="mailto:fredrik@njordstudio.com?subject=Hello!">E-mail (fredrik@njordstudio.com).</a>
+                <a href="mailto:fredrik@njordstudio.com?subject=Hello!">E-mail (fredrik@njordstudio.com)</a>
                 <br />
-                <a href="tel:+1234567890">Phone (+46 (0) 733 600 080).</a>
+                <a href="tel:+1234567890">Phone (+46 (0) 733 600 080)</a>
             </div>
 
             <div class="footerContainer">
@@ -23,7 +26,7 @@ import Social from './Social.astro';
 
             <div class="footerBottomText">
                 <!-- <p>RSS-feed</p> -->
-                <p class="smallText">© 2024 Njord Studio AB. All Rights Reserved.</p>
+                <p>© 2024 Njord Studio AB. All Rights Reserved.</p>
             </div>
         </footer>
 
