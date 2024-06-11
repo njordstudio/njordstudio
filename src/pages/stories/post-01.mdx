@@ -11,7 +11,7 @@ tags: ["todo", "todo", "todo"]
 ---
 
 import PostLayout from "../../layouts/PostLayout.astro";
-import { Image } from "@unpic/astro";
+import { Image } from "astro:assets";
 
 <PostLayout frontmatter={frontmatter}>
 
@@ -28,9 +28,6 @@ import { Image } from "@unpic/astro";
     <Image
         src="https://njordstudioab-776988930.imgix.net/images/my-hero.jpg"
         alt="Me and my grandfather"
-        width={800}
-        height={600}
-        placeholder="blurhash"
     />
 
     I am talking about my grandfather, my hero.
