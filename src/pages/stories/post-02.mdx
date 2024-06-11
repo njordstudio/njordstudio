@@ -5,13 +5,13 @@ date: 2018-01-01
 description: "Summersnight surfing."
 # todo: Fix the thumbnail.
 image:
-    url: "https://docs.astro.build/assets/arc.webp"
+    url: "https://njordstudioab-776988930.imgix.net/last_blue_rays_of_light.jpg"
     alt: "todo - preview post image."
 tags: ["todo", "todo", "todo"]
 ---
 
 import PostLayout from "../../layouts/PostLayout.astro";
-import { Image } from "astro:assets";
+import { Image } from "@unpic/astro";
 
 <PostLayout frontmatter={frontmatter}>
 
@@ -19,7 +19,6 @@ import { Image } from "astro:assets";
         src="https://njordstudioab-776988930.imgix.net/last_blue_rays_of_light.jpg"
         alt="Me and my grandfather"
         placeholder="blurhash"
-        aspect-ratio="4/3"
     />
 
 </PostLayout>
