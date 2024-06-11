@@ -8,6 +8,7 @@ import { imageService } from "@unpic/astro/service";
 export default defineConfig({
   site: 'https://njordstudio.com',
   integrations: [mdx()],
+  output: 'static',
   image: {
     service: imageService({
       fallbackService: "squooshImageService",
