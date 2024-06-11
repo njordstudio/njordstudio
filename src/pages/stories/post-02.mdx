@@ -2,7 +2,7 @@
 title: "My hero"
 author: "Fredrik Svärd"
 date: 2018-01-01
-description: "Memories of my hero."
+description: "Summersnight surfing."
 # todo: Fix the thumbnail.
 image:
     url: "https://docs.astro.build/assets/arc.webp"
@@ -17,10 +17,9 @@ import { Image } from "astro:assets";
 
     <Image
         src="https://njordstudioab-776988930.imgix.net/last_blue_rays_of_light.jpg"
-        placeholder="blurhash"
         alt="Me and my grandfather"
+        placeholder="blurhash"
+        aspect-ratio="4/3"
     />
-
-    I am talking about my grandfather, my hero.
 
 </PostLayout>
