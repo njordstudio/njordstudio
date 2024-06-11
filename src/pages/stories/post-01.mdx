@@ -13,9 +13,6 @@ tags: ["todo", "todo", "todo"]
 import PostLayout from "../../layouts/PostLayout.astro";
 import { Image } from "@unpic/astro";
 
-import image01 from "https://njordstudioab-776988930.imgix.net/images/my-hero.jpg";
-import image02 from "https://njordstudioab-776988930.imgix.net/images/last_blue_rays_of_light.jpg";
-
 <PostLayout frontmatter={frontmatter}>
 
     All my life he has been there, a solid and calm person that I could trust. Especially when I was a little boy growing up in a small town. I could always look him up and be with him. He had always time for me, and a big tolerance the menace that I was.
@@ -28,12 +25,8 @@ import image02 from "https://njordstudioab-776988930.imgix.net/images/last_blue_
 
     This way sounds egocentric to me, but I wish he would have got a couple more years of health as we all could have learned so much from him. Not only from his knowledge of tools and stuff like that but also as a man living with his wife on the land they owned and cared for.
 
-    {/* ![Me and my grandfather](../../images/last_blue_rays_of_light.jpg) */}
-
-    {/* <BlurHashedImage src={image01} alt="My Image" client:load /> */}
-
     <Image
-        src={image01}
+        src="https://njordstudioab-776988930.imgix.net/images/my-hero.jpg"
         alt="Me and my grandfather"
         width={800}
         height={600}
