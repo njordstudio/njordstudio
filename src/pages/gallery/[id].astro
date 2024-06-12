@@ -1,0 +1,42 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const albums = await getCollection("albums");
+
+  return albums.map((album) => ({
+    params: { id: album.id.replace(/\//g, '-') }, // Replace / with -
+  }));
+}
+
+export async function getStaticProps({ params }) {
+  const albums = await getCollection("albums");
+  console.log('params:', params); // Log params
+  console.log('albums:', albums); // Log albums
+  const album = albums.find(album => album.id.replace(/\//g, '-') === params.id);
+  console.log('album:', album); // Log album
+
+  return {
+    props: { album },
+  };
+}
+
+console.log('album:', Astro.props); // Log album
+---
+
+<div class="">
+  <h1 class="">
+  </h1>
+  <p class="">
+  </p>
+
+  <div>
+    Images go here...
+  </div>
+
+  <p class="">
+    <a href="/gallery/" class=""
+      >Go back →</a
+    >
+  </p>
+</div>

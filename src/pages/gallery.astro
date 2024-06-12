@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import { getCollection} from "astro:content";
+
+const albums = await getCollection("albums");
+---
+
+<div>
+    {
+        albums.map((item) => (
+            <a
+            href={`/gallery/${item.id}`}
+            >
+            <Image
+              src={item.data.cover}
+              alt={item.data.title}
+              />
+            <div class="mt-4 text-center text-neutral-700">
+              <strong class="font-normal">{item.data.title}</strong>
+              <p class="text-xs">{item.data.description}</p>
+            </div>
+          </a>
+        ))
+    }
+</div>
