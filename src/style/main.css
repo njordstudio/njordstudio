@@ -136,7 +136,7 @@ header {
 @media screen and (min-width: 720px) {
     .headerLogo {
         position: absolute;
-        top: 26px;
+        top: 20px;
         left: 36px;
     }
 }
@@ -399,11 +399,7 @@ footer .footerBottomText a {
         padding: 2rem 0;
     }
 
-    .container a,
-    .container p,
-    .container h1,
-    .container h2,
-    .container h3 {
+    .content p {
         padding: 0 1rem;
     }
 
@@ -455,7 +451,7 @@ footer .footerBottomText a {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
-    margin-top: 2rem;
+    margin: 2rem 1rem 0 1rem;
 }
 
 .articleItem {
@@ -528,6 +524,6 @@ footer .footerBottomText a {
     flex-flow: column;
 }
 
-.center a {
-    border-bottom: 0.5px solid var(--pop);
+.content a {
+    border-bottom: 1px solid var(--pop);
 }
