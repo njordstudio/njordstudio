@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 const allPosts = await Astro.glob('../pages/stories/*.mdx');
 const title = 'Stories';
+
+// todo: Rewrite this https://docs.astro.build/en/guides/content-collections/
 ---
 
 <BaseLayout title={title}>
@@ -13,8 +15,8 @@ const title = 'Stories';
             <img class="articleImg" src={story.frontmatter.image.url} alt={story.frontmatter.image.alt} />
             <div class="articleItemInfo">
                 <h2>{story.frontmatter.title}</h2>
-                <p class="articleAuthor">{story.frontmatter.author}</p>
                 <p class="articleDescription">{story.frontmatter.description}</p>
+                <p class="articleAuthor">{story.frontmatter.author}</p>
             </div>
             </a>
         ))}

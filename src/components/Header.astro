@@ -2,6 +2,7 @@
 import '../style/main.css';
 import Navigation from '../components/Navigation.astro';
 import Hamburger from './Hamburger.astro';
+import nsLogo from "/src/assets/logo/NS_logo_white.svg";
 ---
 
 <html lang="en">
@@ -40,6 +41,7 @@ import Hamburger from './Hamburger.astro';
     <body class="styledScrollbar">
 
         <header>
+            <img class="headerLogo" src={nsLogo.src} alt="Logo" style="width: 56px; height: auto;" />
             <Navigation />
             <Hamburger />
         </header>

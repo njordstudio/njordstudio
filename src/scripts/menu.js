@@ -5,10 +5,12 @@ document.querySelector('.hamburger').addEventListener('click', () => {
 
     const navigation = document.querySelector('.navigation');
     const hamburger = document.getElementById('hamburger');
+    const logo = document.querySelector('.headerLogo');
 
     if (navigation) {
         navigation.classList.toggle('expanded');
         hamburger.classList.toggle('open');
+        logo.classList.toggle('hiddenLogo');
     }
 });
 

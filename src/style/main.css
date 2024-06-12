@@ -1,7 +1,9 @@
 :root {
-    --black: #1a1a1a;
+    --black: #292926;
     --dark: #474747;
-    --white: #fcfcfc;
+    --white: #fcfafa;
+    --off-white: #f7f5f2;
+    --pop: #c9be8c;
     --font-heading: "Mulish", sans-serif;
     --font-text: "Mulish", sans-serif;
 }
@@ -32,7 +34,7 @@ h3 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
     margin-block-start: 0;
     margin-block-end: 3rem;
@@ -40,7 +42,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         letter-spacing: -0.1rem;
     }
 }
@@ -89,8 +91,9 @@ a {
     font-size: 1.125rem;
 }
 
-a:hover {
-    color: #f2d0b8;
+a:hover,
+a:active {
+    color: var(--pop);
 }
 
 li {
@@ -117,6 +120,25 @@ header {
     top: 0;
     z-index: 100;
     min-height: 3.5rem;
+}
+
+.headerLogo {
+    height: auto;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+.hiddenLogo {
+    display: none;
+}
+
+@media screen and (min-width: 720px) {
+    .headerLogo {
+        position: absolute;
+        top: 26px;
+        left: 36px;
+    }
 }
 
 footer {
@@ -156,6 +178,7 @@ footer .footerBottomText a {
     font-style: italic;
     color: var(--dark);
 }
+
 .footerLogo {
     margin: 3rem 0 1rem 0;
 }
@@ -429,7 +452,7 @@ footer .footerBottomText a {
 .articlesList {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
     margin-top: 2rem;
@@ -442,9 +465,9 @@ footer .footerBottomText a {
     justify-content: top;
     align-items: center;
     width: calc(33% - 1rem);
-    height: 350px;
+    height: 320px;
     border-radius: 0.5rem;
-    background: #f1f1f1;
+    background: var(--off-white);
 }
 
 @media screen and (max-width: 1200px) {
@@ -468,8 +491,9 @@ footer .footerBottomText a {
     }
 }
 
-.articleItem:hover {
-    background-color: #f2f2f2;
+.articleItem:hover,
+.articleItem:active {
+    background-color: var(--pop);
 }
 
 .articleItem img {
@@ -489,9 +513,21 @@ footer .footerBottomText a {
 .articleItemInfo h2,
 .articleItemInfo p {
     text-align: left;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
+    margin-bottom: 0;
 }
 
 .articleDescription {
     display: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.center a {
+    border-bottom: 0.5px solid var(--pop);
 }
