@@ -7,7 +7,14 @@ import { imageService } from "@unpic/astro/service";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://njordstudio.com',
-  integrations: [mdx()],
+  integrations: [
+    mdx(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+  ],
   output: 'static',
   image: {
     service: imageService({

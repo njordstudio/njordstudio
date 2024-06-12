@@ -9,6 +9,20 @@ import nsLogo from "/src/assets/logo/NS_logo_white.svg";
     <head>
         <meta charset="utf-8" />
 
+        <!-- Google Analytics through Partytown -->
+        <script
+        type="text/partytown"
+        src="https://www.googletagmanager.com/gtag/js?id=G-K4R0YCB5C8">
+        </script>
+        <script type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+        dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-K4R0YCB5C8");
+        </script>
+
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -19,15 +33,15 @@ import nsLogo from "/src/assets/logo/NS_logo_white.svg";
         <meta name="theme-color" content="#000000">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta name="generator" content={Astro.generator} />
-        <meta name="description" content="Freelance 3D, Animation and Web3D studio.">
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content="Freelance Photographer, CG Artist & Web Developer.">
         <meta name="copyright"content="NJORD Studio AB">
-        <meta name="keywords" content="3D, Animation, Web3D, VFX"/>
+        <meta name="keywords" content="Photographer, CG Artist, CGI, 3D, Web Developer"/>
         <title>NJORD</title>
 
         <!-- SOME -->
         <meta property="og:title" content="NJORD" />
-        <meta property="og:description" content="Freelance 3D, Animation and Web3D studio." />
+        <meta property="og:description" content="Freelance Photographer, CG Artist & Web Developer." />
         <meta property="og:type" content="website" />
         <!-- <meta property="og:url" content="https://www.example.com/page-url" /> -->
         <!-- <meta property="og:image" content="https://www.example.com/image.jpg" /> -->
