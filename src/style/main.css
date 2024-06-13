@@ -168,6 +168,21 @@ footer a:hover {
 
 .footerContainer {
     margin-bottom: 2.5rem;
+
+    .followMe {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .footerChild {
+        margin: 1.5rem 0;
+    }
+
+    h3 {
+        margin-bottom: 0.25rem;
+    }
 }
 
 footer .footerBottomText {
