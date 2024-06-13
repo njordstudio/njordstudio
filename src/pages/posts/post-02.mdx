@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/PostLayout.astro"
 title: "Surfing in the summer night"
 author: "Fredrik Svärd"
 date: 2018-06-04
@@ -7,18 +8,13 @@ description: "Summersnight surfing."
 image:
     url: "https://njordstudioab-776988930.imgix.net/last_blue_rays_of_light.jpg"
     alt: "todo - preview post image."
-tags: ["todo", "todo", "todo"]
+tags: ["Photo"]
 ---
 
-import PostLayout from "../../layouts/PostLayout.astro";
 import { Image } from "@unpic/astro";
-
-<PostLayout frontmatter={frontmatter}>
 
     <Image
         src="https://njordstudioab-776988930.imgix.net/last_blue_rays_of_light.jpg"
         alt="Me and my grandfather"
         placeholder="blurhash"
     />
-
-</PostLayout>

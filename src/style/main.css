@@ -1,6 +1,7 @@
 :root {
     --black: #292926;
     --dark: #474747;
+    --middle: #b7b7b2;
     --white: #fcfafa;
     --off-white: #f7f5f2;
     --pop: #c9be8c;
@@ -89,6 +90,10 @@ a {
     margin-bottom: 0.5rem;
     font-weight: 400;
     font-size: 1.125rem;
+
+    .styledLink {
+        border-bottom: 1px solid var(--pop);
+    }
 }
 
 a:hover,
@@ -464,6 +469,7 @@ footer .footerBottomText a {
     height: 320px;
     border-radius: 0.5rem;
     background: var(--off-white);
+    border-bottom: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -489,7 +495,15 @@ footer .footerBottomText a {
 
 .articleItem:hover,
 .articleItem:active {
-    background-color: var(--pop);
+    background-color: var(--dark);
+
+    h2 {
+        color: var(--pop);
+    }
+
+    p {
+        color: var(--white);
+    }
 }
 
 .articleItem img {
@@ -524,6 +538,32 @@ footer .footerBottomText a {
     flex-flow: column;
 }
 
-.content a {
-    border-bottom: 1px solid var(--pop);
+.tagsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+button {
+    font-family: var(--font-text);
+    background-color: var(--off-white);
+    color: var(--dark);
+    text-transform: uppercase;
+    font-optical-sizing: auto;
+    font-size: 1.125rem;
+    letter-spacing: 0.05ch;
+    font-weight: 900;
+    border: none;
+    border-radius: 0.125rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+button:hover,
+button:active {
+    background-color: var(--pop);
+    color: var(--white);
 }

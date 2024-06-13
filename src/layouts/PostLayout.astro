@@ -2,6 +2,8 @@
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
+
+console.log("PostLayout:", Astro.props);
 ---
 
 <BaseLayout frontmatter={frontmatter}>
@@ -10,6 +12,17 @@ const { frontmatter } = Astro.props;
             <p class="storyAuthor">Written by: {frontmatter.author}</p>
             <p class="storyDate">Published: {frontmatter.date.toString().slice(0,10)}</p>
             <!-- todo: add tags -->
+            <div class="storyTags">
+                {frontmatter.tags.map((tag, index) => {
+                    return (
+                        <>
+                            <span class="tag">{tag}</span>
+                            {index !== frontmatter.tags.length - 1 && ", "}
+                        </>
+                    );
+                })}
+
+            </div>
         </div>
 
         <div class="content">
