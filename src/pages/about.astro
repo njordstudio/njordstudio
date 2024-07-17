@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from "@unpic/astro";
+import { Image } from 'astro:assets';
+import snowShoeWalking from '../../src/images/Fredrik_snowshoe_walking.jpg';
 
 const title = "About Me";
 
@@ -28,10 +29,11 @@ const skillsPhoto = ["Studio lighting", "Web Developer", "Photographer"];
 
 <BaseLayout title={title}>
 
-    <!-- WIDE IMAGE HERE -->
     <Image
-        src="https://njordstudioab-776988930.imgix.net/Fredrik_snowshoe_walking.jpg"
-        alt="Summer surfing in Varberg"
+    src={snowShoeWalking}
+    alt="Summer surfing in Varberg"
+    width={snowShoeWalking.width / 2}
+    densities={[1.5, 2]}
     />
     <div class="content">
         <p>
