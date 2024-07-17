@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-// import snowShoeWalking from '../../src/images/Fredrik_snowshoe_walking.jpg';
-import snowShoeWalking from '../../src/images/project_04/Njord_Studio_Dried_Reed.jpg';
+import myImage from '../../src/images/Fredrik_snowshoe_walking.jpg';
 
 const title = "About Me";
 
@@ -27,14 +26,16 @@ const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS,
 
 <BaseLayout title={title}>
 
-    <Image
-        src={snowShoeWalking}
-        alt="Summer surfing in Varberg"
-        width={snowShoeWalking.width / 2}
-        densities={[1.5, 2]}
-    />
 
     <div class="content">
+
+        <Image
+            src={myImage}
+            alt="Fredrik snow shoe walking"
+            width={myImage.width / 2}
+            densities={[1.5, 2]}
+        />
+
         <p>
             <!-- CG ARTIST, WEB DEVELOPER & PHOTOGRAPHER. -->
             <br />
