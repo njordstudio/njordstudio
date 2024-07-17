@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-// import { imageService } from "@unpic/astro/service";
 import partytown from "@astrojs/partytown";
 
 
