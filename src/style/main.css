@@ -23,7 +23,7 @@ h3,
 p,
 a {
     color: var(--black);
-    text-align: center;
+    /* text-align: center; */
 }
 
 h1,
@@ -581,4 +581,8 @@ button:hover,
 button:active {
     background-color: var(--pop);
     color: var(--white);
+}
+
+.center {
+    text-align: center;
 }

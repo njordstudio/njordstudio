@@ -9,7 +9,7 @@ const { frontmatter, title } = Astro.props;
 
 <Header />
     <section class="container">
-        <h1>{title || frontmatter.title}</h1>
+        <h1 class="center">{title || frontmatter.title}</h1>
         <slot />
     </section>
 <Footer />
