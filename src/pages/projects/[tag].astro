@@ -20,6 +20,7 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts, uniqueTags } = Astro.props;
+
 ---
 
 <BaseLayout title={tag ?? 'Projects'}>
@@ -34,16 +35,19 @@ const { posts, uniqueTags } = Astro.props;
 
   <div class="articlesList content">
 
-      {posts?.map((story) => (
-          <a href={story.url} class="articleItem">
+    {posts?.slice().sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)).map((story, index) => (
+      <a href={story.url} class="articleItem" key={index}>
           <img class="articleImg" src={story.frontmatter.image.url} alt={story.frontmatter.image.alt} />
-          <div class="articleItemInfo">
+          <p class="articleItemInfo">
               <h2>{story.frontmatter.title}</h2>
               <p class="articleDescription">{story.frontmatter.description}</p>
-              <p class="articleAuthor">{story.frontmatter.description}</p>
+              <!-- <p>Date posted: {story.frontmatter.date.replace(/^(\d{4}-\d{2}-\d{2}).*/, "$1")} </p>
+              <p class="articleAuthor">Written by: {story.frontmatter.author}</p>-->
           </div>
-          </a>
-      ))}
+      </a>
+    ))}
+
+
 
   </div>
 
