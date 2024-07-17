@@ -5,16 +5,16 @@ import snowShoeWalking from '../../src/images/Fredrik_snowshoe_walking.jpg';
 
 const title = "About Me";
 
-const identity = {
-  firstName: "Fredrik",
-  country: "Sweden",
-  occupation: "Freelancer",
-  hobbies: ["snowboarding", "ocean", "outdoor activities"],
-  education: ["React JS Framework - Folkuniversitetet (2022)",
-  "Berghs School of Communication - Art Direction (2015)",
-  "Forsbergs Skola - Grafisk Design (2014)"],
-  awards: ["First prize - Full page ad - Issued by Borås Tidning Din bästa sida 2021", "Silver in ANA International Echo Awards 2021.",]
-};
+// const identity = {
+//   firstName: "Fredrik",
+//   country: "Sweden",
+//   occupation: "Freelancer",
+//   hobbies: ["snowboarding", "ocean", "outdoor activities"],
+//   education: ["React JS Framework - Folkuniversitetet (2022)",
+//   "Berghs School of Communication - Art Direction (2015)",
+//   "Forsbergs Skola - Grafisk Design (2014)"],
+//   awards: ["First prize - Full page ad - Issued by Borås Tidning Din bästa sida 2021", "Silver in ANA International Echo Awards 2021.",]
+// };
 
 const clients = ["Didriksson (CG/Photo)", "ACG Pulse (Photo)", "Esoft (Photo)", "High End Media Group (CG)", "Jensen (CG)", "CGI (CG)", "SunOff (CG)", "Hemtex (Photo assistant)", "Ellos (Photo assistant)", "Vyonyx (CG)", "Beyond (CG)", "Rekotex (Web)", "Autocirc (Web)", "Hööks (Web)", "Life (Web)"];
 
@@ -22,19 +22,17 @@ const skillsCg = ["Model", "Texture", "Light", "UV", "Render", "DCC (Blender, Ma
 
 const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS, Linaria, Tailwind)", "Git", "Linux server", "Docker", "Python", "C# (learning)", "SQL", "Wordpress", "PHP", "Norce", "API", "GraphQL", "REST and more"];
 
-
-
-const skillsPhoto = ["Studio lighting", "Web Developer", "Photographer"];
 ---
 
 <BaseLayout title={title}>
 
     <Image
-    src={snowShoeWalking}
-    alt="Summer surfing in Varberg"
-    width={snowShoeWalking.width / 2}
-    densities={[1.5, 2]}
+        src={snowShoeWalking}
+        alt="Summer surfing in Varberg"
+        width={snowShoeWalking.width / 2}
+        densities={[1.5, 2]}
     />
+
     <div class="content">
         <p>
             <!-- CG ARTIST, WEB DEVELOPER & PHOTOGRAPHER. -->
@@ -86,19 +84,4 @@ const skillsPhoto = ["Studio lighting", "Web Developer", "Photographer"];
 
     </p>
 
-    <!-- <p>Edcation:</p>
-    <p class="skillCloud">
-        {identity.education.map((education, index) => (
-            <span key={index}>{education}{index !== identity.education.length - 1 ? '∙' : ''}</span>
-        ))}
-    </p>
-
-    <p>Awards:</p>
-    <p class="skillCloud">
-        {identity.awards.map((awards, index) => (
-            <span key={index}>{awards}{index !== identity.awards.length - 1 ? '∙' : ''}</span>
-        ))}
-    </p> -->
-
-    <!-- <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li> -->
 </BaseLayout>
