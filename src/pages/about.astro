@@ -59,7 +59,7 @@ const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS,
     <h3 class="center">Clients I worked with</h3>
     <p class="skillCloud">
         {clients.map((webskill, index) => (
-            <span key={index}>
+            <span>
                 {webskill}{index !== clients.length - 1 && <span class="dot">·</span>}
             </span>
         ))}
@@ -68,7 +68,7 @@ const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS,
     <h3 class="center">3D / CG skills</h3>
     <p class="skillCloud">
         {skillsCg.map((webskill, index) => (
-            <span key={index}>
+            <span>
                 {webskill}{index !== skillsCg.length - 1 && <span class="dot">·</span>}
             </span>
         ))}
@@ -77,7 +77,7 @@ const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS,
     <h3 class="center">Web development skills</h3>
     <p class="skillCloud">
         {skillsDev.map((webskill, index) => (
-            <span key={index}>
+            <span>
                 {webskill}{index !== skillsDev.length - 1 && <span class="dot">·</span>}
             </span>
         ))}
