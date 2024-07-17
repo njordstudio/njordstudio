@@ -39,7 +39,7 @@ const { posts, uniqueTags } = Astro.props;
       <a href={story.url} class="articleItem" key={index}>
           <img class="articleImg" src={story.frontmatter.image.url} alt={story.frontmatter.image.alt} />
           <p class="articleItemInfo">
-              <h2>{story.frontmatter.title}</h2>
+              <h2 class="center">{story.frontmatter.title}</h2>
               <p class="articleDescription">{story.frontmatter.description}</p>
               <!-- <p>Date posted: {story.frontmatter.date.replace(/^(\d{4}-\d{2}-\d{2}).*/, "$1")} </p>
               <p class="articleAuthor">Written by: {story.frontmatter.author}</p>-->
