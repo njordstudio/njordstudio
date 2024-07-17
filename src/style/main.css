@@ -1,7 +1,8 @@
 :root {
     --black: #292926;
     --dark: #474747;
-    --middle: #b7b7b2;
+    --middle: #656563;
+    --light: #b7b7b2;
     --white: #fcfafa;
     --off-white: #f7f5f2;
     --pop: #c9be8c;
@@ -606,6 +607,7 @@ figure {
 
 figcaption {
     text-align: center;
+    color: var(--middle);
 }
 
 .dot {
