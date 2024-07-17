@@ -600,6 +600,9 @@ button:active {
 .center {
     text-align: center;
 }
+figure {
+    margin: 2rem 0;
+}
 
 figcaption {
     text-align: center;
