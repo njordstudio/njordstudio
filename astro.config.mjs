@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-import { imageService } from "@unpic/astro/service";
+// import { imageService } from "@unpic/astro/service";
 import partytown from "@astrojs/partytown";
 
 
@@ -17,11 +17,7 @@ export default defineConfig({
   ],
   output: 'static',
   image: {
-    service: imageService({
-      fallbackService: "squooshImageService",
-      placeholder: "blurhash",
-      layout: "constrained",
-    }),
+    fallbackService: "squooshImageService",
   },
   // Workaround to fix bug in WSL
   vite: {

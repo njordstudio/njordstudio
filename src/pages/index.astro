@@ -1,35 +1,45 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from "@unpic/astro";
-// import { Image } from 'astro:assets';
+// import { Image } from "@unpic/astro";
+import { Image } from 'astro:assets';
+import myImage from '../../src/images/project_04/Njord_Studio_Dried_Reed.jpg';
 
 const title = "Welcome to NJORD!";
 ---
 
 <BaseLayout title={title}>
 
-        <div class="top">
-            <br />
-            <br />
-            <Image
-            src="https://www.njordstudio.com/images/project_02/Njord_Studio_Storm_Cabin_03.jpg"
-            alt="Summer surfing in Varberg"
-            />
+        <div class="content">
 
-            <br />
-            <br />
-            <h2>About me:</h2>
-            <p>
-                I’m Fredrik, a dedicated freelance 3D artist and web developer with a passion for helping my clients with their needs. With a background in both 3D/CG imagery and web development, I offer a unique blend of artistic creativity and technical expertise.
+            <p id="highlight-container" class="slogan">
+                3D/CG (Computer-generated) imagery is everywhere in today's world, on our TV screens, social media feeds and print media. Why is that? It's fast to create, more precise and often cheaper than photography.
+                <br />
+                <br />
+                I'm Fredrik, a freelance 3D artist and web developer, driven by a passion for bringing my client's visions to life.
+                With extensive experience in CG imagery and web development, I combine artistic creativity with technical expertise to deliver exceptional results tailored to your needs.
             </p>
 
-            <br />
-            <h2>Services:</h2>
-            <ul>
-                <li><h3>3D/CG Images:</h3> With over a decade of experience in the field, I offer comprehensive services in 3D imagery, from initial concept and modeling to detailed texturing and high-quality rendering. Whether you need photorealistic visuals or stylized 3D art, I can bring your ideas to life with precision and creativity.</li>
+            <Image
+            src={myImage}
+            alt="Summer surfing in Varberg"
+            width={myImage.width / 2}
+            densities={[1.5, 2]}
+            />
+            <figcaption>Full CG image.</figcaption>
 
-                <li><h3>Web Development:</h3> Specializing in ES6 JavaScript, I provide advanced web development support, integrating seamlessly with any team. My skills in modern JavaScript techniques ensure your web projects are both dynamic and efficient. For more on my expertise, check out the <a href="/about/">About page.</a></li>
-            </ul>
+
+
+            <h2 class="center">Services</h2>
+
+                    <h3>3D/CG Images:</h3>
+                    <p>With over a decade of experience in the field, I offer comprehensive services in 3D imagery, from initial concept and modeling to detailed texturing and high-quality rendering. Whether you need photorealistic visuals or stylized 3D art, I can bring your ideas to life with precision and creativity.</p>
+
+
+
+                    <h3>Web Development:</h3>
+                    <p>Specializing in ES6 JavaScript, I provide advanced web development support, integrating seamlessly with any team. My skills in modern JavaScript techniques ensure your web projects are both dynamic and efficient. For more on my expertise, check out the <a href="/about/">About page.</a></p>
+
+
 
         </div>
 

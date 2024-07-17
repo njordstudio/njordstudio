@@ -11,7 +11,7 @@ image:
 tags: ["3D"]
 ---
 
-import { Image } from "@unpic/astro";
+import { Image  } from 'astro:assets';
 
 <b>Project Name:</b> West coast house<br />
 <b>Client:</b> Personal project<br />
@@ -19,27 +19,12 @@ import { Image } from "@unpic/astro";
 <b>Software Used:</b> Autodesk Maya, Arnold Renderer, Adobe Photoshop<br />
 <b>Description:</b> I wanted to photograph a nice setting for my 3D model, so I went to the west coast of Sweden and then I photomatched the 3D scene to the photograph and then I rendered it out in Maya / Arnold. Did the mattepainting in Photoshop.<br />
 
-<Image
-    src="https://njordstudioab-776988930.imgix.net/images/project_01/Njord_Studio_Archviz_Westcoast_01.jpg"
-    alt="Me and my grandfather"
-    placeholder="blurhash"
-/>
-<i>Raw 3D model screenshoot.</i>
-<br />
-<br />
 
-<Image
-    src="https://njordstudioab-776988930.imgix.net/images/project_01/Njord_Studio_Archviz_Westcoast_02.jpg"
-    alt="Me and my grandfather"
-    placeholder="blurhash"
-/>
-<i>Raw 3D model screenshoot.</i>
-<br />
-<br />
+![Raw archviz 3D model.](../../../src/images/project_01/Njord_Studio_Archviz_Westcoast_01.jpg)
+<figcaption>Raw 3D model screenshoot.</figcaption>
 
-<Image
-    src="https://www.njordstudio.com/images/project_01/Njord_Studio_Archviz_Westcoast_04.jpg"
-    alt="Me and my grandfather"
-    placeholder="blurhash"
-/>
-<i>Final CG image.</i>
+![Raw archviz 3D model.](../../../src/images/project_01/Njord_Studio_Archviz_Westcoast_02.jpg)
+<figcaption>Raw 3D model screenshoot.</figcaption>
+
+![Final CG image with background photo.](../../../src/images/project_01/Njord_Studio_Archviz_Westcoast_04.jpg)
+<figcaption>Final CG image.</figcaption>

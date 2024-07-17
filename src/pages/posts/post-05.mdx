@@ -11,7 +11,7 @@ image:
 tags: ["3D"]
 ---
 
-import { Image } from "@unpic/astro";
+import { Image  } from 'astro:assets';
 
 <b>Project Name:</b> Refuel<br />
 <b>Client:</b> Personal project<br />
@@ -20,9 +20,5 @@ import { Image } from "@unpic/astro";
 <b>Description:</b> I wanted to make an environment with an HDRI and Backplate image of my own creation, render in a car (I have not modeled this car) with custom materials and try V-ray Renderer.<br />
 
 
-<Image
-    src="https://www.njordstudio.com/images/project_03/Njord_Studio_Refule.jpg"
-    alt="Showing the finished CG image."
-    placeholder="blurhash"
-/>
-<i>Final CG image.</i>
+![Final CG image.](../../../src/images/project_03/Njord_Studio_Refule.jpg)
+<figcaption>Final CG image.</figcaption>

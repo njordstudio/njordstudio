@@ -15,7 +15,7 @@ const { frontmatter } = Astro.props;
                 {frontmatter.tags.map((tag, index) => {
                     return (
                         <>
-                            <span class="tag">{tag}</span>
+                            <span class="tag">Tags: {tag}</span>
                             {index !== frontmatter.tags.length - 1 && ", "}
                         </>
                     );

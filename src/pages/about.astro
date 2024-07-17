@@ -21,6 +21,8 @@ const skillsCg = ["Model", "Texture", "Light", "UV", "Render", "DCC (Blender, Ma
 
 const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS, Linaria, Tailwind)", "Git", "Linux server", "Docker", "Python", "C# (learning)", "SQL", "Wordpress", "PHP", "Norce", "API", "GraphQL", "REST and more"];
 
+
+
 const skillsPhoto = ["Studio lighting", "Web Developer", "Photographer"];
 ---
 
@@ -51,36 +53,36 @@ const skillsPhoto = ["Studio lighting", "Web Developer", "Photographer"];
             Hope to hear from you!
             <br />
             <br />
-            ---
-            <br />
-            <br />
-            CG knowledge: Model, Texture, Light, UV, Render, DCC (Blender, Maya, C4D), Nuke, Photoshop, Mattepainting, MARI, PBR, Zbrush, Worldcreator and more.
-            <br />
-            <br />
-            Dev knowledge: ES6, React.js, Node.js, Astro.js, HTML, CSS (SCSS, Linaria, Tailwind), Git, Linux server, Docker, Python, SQL, Wordpress, Norce, API, GraphQL, REST and more.
         </p>
     </div>
 
-    <!-- <p>Clients I worked with:</p>
+    <h3 class="center">Clients I worked with</h3>
     <p class="skillCloud">
-        {clients.map((client, index) => (
-            <span key={index}>{client}{index !== clients.length - 1 ? '∙' : ''}</span>
-        ))}
-    </p> -->
-
-    <!-- <p>CG skills:</p>
-    <p class="skillCloud">
-        {skillsCg.map((cgskill, index) => (
-            <span key={index}>{cgskill}{index !== skillsCg.length - 1 ? '∙' : ''}</span>
+        {clients.map((webskill, index) => (
+            <span key={index}>
+                {webskill}{index !== clients.length - 1 && <span class="dot">·</span>}
+            </span>
         ))}
     </p>
 
-    <p>Web development skills:</p>
+    <h3 class="center">3D / CG skills</h3>
     <p class="skillCloud">
-        {skillsWeb.map((webskill, index) => (
-            <span key={index}>{webskill}{index !== skillsWeb.length - 1 ? '∙' : ''}</span>
+        {skillsCg.map((webskill, index) => (
+            <span key={index}>
+                {webskill}{index !== skillsCg.length - 1 && <span class="dot">·</span>}
+            </span>
         ))}
-    </p> -->
+    </p>
+
+    <h3 class="center">Web development skills</h3>
+    <p class="skillCloud">
+        {skillsDev.map((webskill, index) => (
+            <span key={index}>
+                {webskill}{index !== skillsDev.length - 1 && <span class="dot">·</span>}
+            </span>
+        ))}
+
+    </p>
 
     <!-- <p>Edcation:</p>
     <p class="skillCloud">
