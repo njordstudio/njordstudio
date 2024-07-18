@@ -18,15 +18,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
+    setup:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
 
       - name: Install dependencies
         run: yarn install
 
+    continue:
       - name: Run image copy script
         run: node copy-images.js
+        needs: setup
 
       - name: Install, build, and upload your site
         uses: withastro/action@v2
