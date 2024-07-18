@@ -26,16 +26,32 @@ async function copyImages() {
             let imageUrl = frontmatter.image.url;
 
             // Remove leading ../../../ from imageUrl
-            imageUrl = imageUrl.replace(/^\.+\//, '');
-            imageUrl = imageUrl.replace(/^\.+\//, '');
-            imageUrl = imageUrl.replace(/^\.+\//, '');
+            imageUrl = imageUrl.replace(/^\.\.\.\//, '');
+            imageUrl = imageUrl.replace(/^\.\.\.\//, '');
+            imageUrl = imageUrl.replace(/^\.\.\.\//, '');
 
             // Adjust the URL to match the local image path
             const localImagePath = imageUrl.replace('http://www.njordstudio.com', 'src');
 
             if (fs.existsSync(localImagePath)) {
                 const imageFileName = path.basename(localImagePath);
-                const destinationPath = path.join(publicImagesDir, imageFileName);
+
+                // Extract project folder name from the imageUrl
+                const projectFolderMatch = imageUrl.match(/project_\d+/);
+                if (!projectFolderMatch) {
+                    console.warn(`Project folder not found in image URL: ${imageUrl}`);
+                    continue;
+                }
+                const projectFolderName = projectFolderMatch[0];
+
+                const projectFolderPath = path.join(publicImagesDir, projectFolderName);
+
+                // Ensure the project folder exists in the destination directory
+                if (!fs.existsSync(projectFolderPath)) {
+                    fs.mkdirSync(projectFolderPath, { recursive: true });
+                }
+
+                const destinationPath = path.join(projectFolderPath, imageFileName);
 
                 try {
                     // Use sharp to process and save the image
