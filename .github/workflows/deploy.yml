@@ -22,6 +22,9 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Run image copy script
         run: node copy-images.js
 
