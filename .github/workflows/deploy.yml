@@ -39,7 +39,7 @@ jobs:
           yarn install
 
       - name: Add sharp
-        run: yarn add sharp
+        run: yarn add sharp --ignore-engines
 
       - name: Build
         run: yarn build
