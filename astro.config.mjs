@@ -24,6 +24,6 @@ export default defineConfig({
     },
   },
   image: {
-    service: astroConfig.image?.service || passthroughImageService,
+    service: passthroughImageService(),
   }
 });
