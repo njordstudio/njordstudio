@@ -16,13 +16,7 @@ export default defineConfig({
   ],
   output: 'static',
   // Workaround to fix bug in WSL
-  vite: {
-    server: {
-      watch: {
-        usePolling: true,
-      },
-    },
-  },
+
   image: {
     service: passthroughImageService(),
   }
