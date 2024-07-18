@@ -15,9 +15,6 @@ export default defineConfig({
     }),
   ],
   output: 'static',
-  image: {
-    fallbackService: "squooshImageService",
-  },
   // Workaround to fix bug in WSL
   vite: {
     server: {
@@ -26,4 +23,9 @@ export default defineConfig({
       },
     },
   },
+  buildOptions: {
+    rollupOptions: {
+      external: ['@julian_cataldo/astro-lightbox']
+    }
+  }
 });
