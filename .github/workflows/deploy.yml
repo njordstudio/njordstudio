@@ -22,8 +22,25 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: yarn install
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '202'
+
+      - name: Cache Yarn dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.yarn-cache
+            node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules yarn.lock
+          yarn install
 
       - name: Add sharp
         run: yarn add sharp --ignore-engines
