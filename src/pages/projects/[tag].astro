@@ -1,5 +1,4 @@
 ---
-// If you nativate to .../tags/blogging the props will be {tag: "blogging"}.
 import BaseLayout from '../../layouts/BaseLayout.astro'
 
 export async function getStaticPaths() {
@@ -20,7 +19,6 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts, uniqueTags } = Astro.props;
-
 ---
 
 <BaseLayout title={tag ?? 'Projects'}>
@@ -30,7 +28,6 @@ const { posts, uniqueTags } = Astro.props;
     {uniqueTags?.map((tag) => (
       <a href={`/projects/${tag}`} class="tagItem"><button>{tag}</button></a>
     ))}
-  </div>
   </div>
 
   <div class="articlesList content">
@@ -45,8 +42,6 @@ const { posts, uniqueTags } = Astro.props;
           </div>
       </a>
     ))}
-
-
 
   </div>
 

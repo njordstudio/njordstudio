@@ -8,41 +8,34 @@ const title = "Welcome to NJORD!";
 
 <BaseLayout title={title}>
 
+    <div class="content">
 
-        <div class="content">
+        <p>
+            3D/CG (Computer-generated) imagery is everywhere in today's world, on our TV screens, social media feeds and print media. Why is that? It's fast to create, more precise and often cheaper than photography.
+            <br />
+            <br />
+            I'm Fredrik, a freelance 3D artist and web developer, driven by a passion for bringing my client's visions to life.
+            With extensive experience in CG imagery and web development, I combine artistic creativity with technical expertise to deliver exceptional results tailored to your needs.
+        </p>
 
-            <p id="highlight-container" class="slogan">
-                3D/CG (Computer-generated) imagery is everywhere in today's world, on our TV screens, social media feeds and print media. Why is that? It's fast to create, more precise and often cheaper than photography.
-                <br />
-                <br />
-                I'm Fredrik, a freelance 3D artist and web developer, driven by a passion for bringing my client's visions to life.
-                With extensive experience in CG imagery and web development, I combine artistic creativity with technical expertise to deliver exceptional results tailored to your needs.
-            </p>
+        <figure data-lightbox="true">
+            <Image
+            src={startImg}
+            alt="Summer surfing in Varberg"
+            width={startImg.width / 2}
+            densities={[1.5, 2]}
+            />
+            <figcaption>Full CG image for Jensen @ R3.</figcaption>
+        </figure>
 
-            <figure data-lightbox="true">
-                <Image
-                src={startImg}
-                alt="Summer surfing in Varberg"
-                width={startImg.width / 2}
-                densities={[1.5, 2]}
-                />
-                <figcaption>Full CG image for Jensen @ R3.</figcaption>
-            </figure>
+        <h2 class="center">Services</h2>
 
+            <h3>3D/CG Images:</h3>
+            <p>With over a decade of experience in the field, I offer comprehensive services in 3D imagery, from initial concept and modeling to detailed texturing and high-quality rendering. Whether you need photorealistic visuals or stylized 3D art, I can bring your ideas to life with precision and creativity.</p>
 
+            <h3>Web Development:</h3>
+            <p>Specializing in ES6 JavaScript, I provide advanced web development support, integrating seamlessly with any team. My skills in modern JavaScript techniques ensure your web projects are both dynamic and efficient. For more on my expertise, check out the <a href="/about/">About page.</a></p>
 
-            <h2 class="center">Services</h2>
-
-                    <h3>3D/CG Images:</h3>
-                    <p>With over a decade of experience in the field, I offer comprehensive services in 3D imagery, from initial concept and modeling to detailed texturing and high-quality rendering. Whether you need photorealistic visuals or stylized 3D art, I can bring your ideas to life with precision and creativity.</p>
-
-
-
-                    <h3>Web Development:</h3>
-                    <p>Specializing in ES6 JavaScript, I provide advanced web development support, integrating seamlessly with any team. My skills in modern JavaScript techniques ensure your web projects are both dynamic and efficient. For more on my expertise, check out the <a href="/about/">About page.</a></p>
-
-
-
-        </div>
+    </div>
 
 </BaseLayout>

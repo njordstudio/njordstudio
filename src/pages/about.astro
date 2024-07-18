@@ -15,7 +15,6 @@ const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS,
 
 <BaseLayout title={title}>
 
-
     <div class="content">
 
         <Image
@@ -50,9 +49,9 @@ const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS,
         <p class="skillCloud">
             {clients.map((webskill, index) => (
                 <span>
-                {webskill}{index !== clients.length - 1 && <span class="dot">·</span>}
-            </span>
-        ))}
+                    {webskill}{index !== clients.length - 1 && <span class="dot">·</span>}
+                </span>
+            ))}
         </p>
 
         <h3 class="center">3D / CG skills</h3>
@@ -71,7 +70,6 @@ const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS,
                     {webskill}{index !== skillsDev.length - 1 && <span class="dot">·</span>}
                 </span>
             ))}
-
         </p>
     </div>
 
