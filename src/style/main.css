@@ -8,6 +8,7 @@
     --pop: #c9be8c;
     --font-heading: "Mulish", sans-serif;
     --font-text: "Mulish", sans-serif;
+    --small-font: 0.75rem;
 }
 
 body {
@@ -194,7 +195,7 @@ footer .footerBottomText {
 
 footer .footerBottomText p,
 footer .footerBottomText a {
-    font-size: 0.75rem;
+    font-size: var(--small-font);
     font-weight: 400;
     font-style: italic;
     color: var(--dark);
@@ -212,14 +213,6 @@ footer .footerBottomText a {
     hyphens: manual;
 }
 
-.stories img {
-    width: auto;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
 .blurhash-placeholder {
     display: flex;
     justify-content: center;
@@ -233,11 +226,10 @@ footer .footerBottomText a {
     margin-bottom: 2rem;
 }
 
-.blurhash-image, img {
+img {
     max-width: 100%;
     max-height: 80dvh;
     object-fit: contain;
-    /* display: none; */
     height: auto;
 }
 
@@ -323,8 +315,8 @@ footer .footerBottomText a {
 #hamburger {
     position: absolute;
     top: 0.6875rem;
-    right: 0.5rem;
-    width: 3rem;
+    right: 0.85rem;
+    width: 2.5rem;
     height: 45px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -603,11 +595,25 @@ button:active {
 }
 figure {
     margin: 2rem 0;
+    /* background: var(--black); */
 }
 
 figcaption {
     text-align: center;
-    color: var(--middle);
+    color: var(--light);
+    padding: 2px 0 4px 0;
+    font-size: var(--small-font);
+}
+
+figure p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    height: fit-content;
+}
+
+.stories figcaption {
+    position: relative;
+    top: -2px;
 }
 
 .dot {

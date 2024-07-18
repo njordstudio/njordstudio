@@ -1,22 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-// import { Image } from 'astro:assets';
-// import myImage from '../../src/images/Fredrik_snowshoe_walking.jpg';
+import { Image } from 'astro:assets';
+import myImage from '../../src/images/Fredrik_snowshoe_walking.jpg';
 
 const title = "About Me";
 
-// const identity = {
-//   firstName: "Fredrik",
-//   country: "Sweden",
-//   occupation: "Freelancer",
-//   hobbies: ["snowboarding", "ocean", "outdoor activities"],
-//   education: ["React JS Framework - Folkuniversitetet (2022)",
-//   "Berghs School of Communication - Art Direction (2015)",
-//   "Forsbergs Skola - Grafisk Design (2014)"],
-//   awards: ["First prize - Full page ad - Issued by Borås Tidning Din bästa sida 2021", "Silver in ANA International Echo Awards 2021.",]
-// };
-
-const clients = ["Didriksson (CG/Photo)", "ACG Pulse (Photo)", "Esoft (Photo)", "High End Media Group (CG)", "Jensen (CG)", "CGI (CG)", "SunOff (CG)", "Hemtex (Photo assistant)", "Ellos (Photo assistant)", "Vyonyx (CG)", "Beyond (CG)", "Rekotex (Web)", "Autocirc (Web)", "Hööks (Web)", "Life (Web)"];
+const clients = ["Didriksson (CG/Photo)", "High End Media Group (CG)", "Jensen @ R3 (CG)", "SunOff @ R3 (CG)", "Vyonyx (CG)", "STCC @ R3 (CG)", "Beyond (CG)", "We are Woonderland (CG)", "Hemtex (Photo ass)", "Ellos (Photo ass)", "Gina tricot (Photo ass)",   "Rekotex (Web)", "Autocirc @ R3 (Web)", "Hööks @ R3 (Web)", "Life @ R3 (Web)",  "ACG Pulse (Photo)", "Esoft (Photo)",];
 
 const skillsCg = ["Model", "Texture", "Light", "UV", "Render", "DCC (Blender, Maya, C4D)", "Photoshop", "Mattepainting", "Retousching", "PBR", "Zbrush", "HDRI Creation", "Worldcreator and more"];
 
@@ -29,12 +18,12 @@ const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS,
 
     <div class="content">
 
-        <!-- <Image
+        <Image
             src={myImage}
             alt="Fredrik snow shoe walking"
             width={myImage.width / 2}
             densities={[1.5, 2]}
-        /> -->
+        />
 
         <p>
             <!-- CG ARTIST, WEB DEVELOPER & PHOTOGRAPHER. -->
@@ -56,34 +45,34 @@ const skillsDev = ["ES6", "React.js", "Node.js", "Astro.js", "HTML", "CSS (SCSS,
             <br />
             <br />
         </p>
-    </div>
 
-    <h3 class="center">Clients I worked with</h3>
-    <p class="skillCloud">
-        {clients.map((webskill, index) => (
-            <span>
+        <h3 class="center">Clients I worked with</h3>
+        <p class="skillCloud">
+            {clients.map((webskill, index) => (
+                <span>
                 {webskill}{index !== clients.length - 1 && <span class="dot">·</span>}
             </span>
         ))}
-    </p>
+        </p>
 
-    <h3 class="center">3D / CG skills</h3>
-    <p class="skillCloud">
-        {skillsCg.map((webskill, index) => (
-            <span>
-                {webskill}{index !== skillsCg.length - 1 && <span class="dot">·</span>}
-            </span>
-        ))}
-    </p>
+        <h3 class="center">3D / CG skills</h3>
+        <p class="skillCloud">
+            {skillsCg.map((webskill, index) => (
+                <span>
+                    {webskill}{index !== skillsCg.length - 1 && <span class="dot">·</span>}
+                </span>
+            ))}
+        </p>
 
-    <h3 class="center">Web development skills</h3>
-    <p class="skillCloud">
-        {skillsDev.map((webskill, index) => (
-            <span>
-                {webskill}{index !== skillsDev.length - 1 && <span class="dot">·</span>}
-            </span>
-        ))}
+        <h3 class="center">Web development skills</h3>
+        <p class="skillCloud">
+            {skillsDev.map((webskill, index) => (
+                <span>
+                    {webskill}{index !== skillsDev.length - 1 && <span class="dot">·</span>}
+                </span>
+            ))}
 
-    </p>
+        </p>
+    </div>
 
 </BaseLayout>
