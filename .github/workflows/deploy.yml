@@ -33,6 +33,9 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
 
+      - name: Add sharp
+        run: yarn add sharp --ignore-engines
+
       - name: Install gray-matter
         run: yarn add gray-matter --ignore-engines
 
