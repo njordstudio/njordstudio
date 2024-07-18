@@ -17,6 +17,11 @@ export default defineConfig({
   output: 'static',
   // Workaround to fix bug in WSL
   vite: {
+    build: {
+      rollupOptions: {
+        external: ['@julian_cataldo/astro-lightbox']
+      }
+    },
     server: {
       watch: {
         usePolling: true,
