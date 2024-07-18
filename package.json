@@ -7,12 +7,14 @@
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "astro": "astro"
+        "astro": "astro",
+        "copy-images": "node copy-images.js"
     },
     "dependencies": {
         "@astrojs/mdx": "^3.0.1",
         "@astrojs/partytown": "^2.1.1",
         "astro": "^4.5.9",
+        "gray-matter": "^4.0.3",
         "gsap": "^3.12.5",
         "sharp": "^0.33.4"
     }
