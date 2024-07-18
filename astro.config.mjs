@@ -22,6 +22,9 @@ export default defineConfig({
         usePolling: true,
       },
     },
+    ssr: {
+      noExternal: ['sharp']
+    }
   },
   image: {
     service: passthroughImageService()
