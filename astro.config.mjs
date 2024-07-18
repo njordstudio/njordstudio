@@ -1,9 +1,8 @@
-import { defineConfig, passthroughImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import partytown from "@astrojs/partytown";
+import { astroConfig } from '@julian_cataldo/astro-lightbox';
 
-
-// https://astro.build/config
 export default defineConfig({
   site: 'https://njordstudio.com',
   integrations: [
@@ -15,8 +14,12 @@ export default defineConfig({
     }),
   ],
   output: 'static',
-  // Workaround to fix bug in WSL
   vite: {
+    build: {
+      rollupOptions: {
+        external: ['@julian_cataldo/astro-lightbox'],
+      },
+    },
     server: {
       watch: {
         usePolling: true,
@@ -24,7 +27,7 @@ export default defineConfig({
     },
   },
   image: {
-    service: passthroughImageService()
+    service: astroConfig.image?.service || passthroughImageService,
   },
   buildOptions: {
     rollupOptions: {
