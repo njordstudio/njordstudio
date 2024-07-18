@@ -84,6 +84,13 @@ p {
     font-weight: 300;
 }
 
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 1.125rem;
+        letter-spacing: 0.025ch;
+    }
+}
+
 a {
     font-optical-sizing: auto;
     font-style: normal;
@@ -489,7 +496,7 @@ img {
     align-items: center;
     width: calc(33% - 1rem);
     height: 320px;
-    border-radius: 0.5rem;
+    /* border-radius: 0.25rem; */
     background: var(--off-white);
     border-bottom: none;
 }
@@ -533,7 +540,7 @@ img {
     height: 150px;
     object-fit: cover;
     object-position: center;
-    border-radius: 0.5rem 0.5rem 0 0;
+    border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .articleItemInfo {
