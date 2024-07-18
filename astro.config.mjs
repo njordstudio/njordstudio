@@ -27,6 +27,14 @@ export default defineConfig({
     },
     ssr: {
       noExternal: ['@julian_cataldo/astro-lightbox'],
+      external: {
+        resolveId: (id) => {
+          if (id.endsWith('.astro')) {
+            return { id, external: true };
+          }
+          return null;
+        },
+      },
     },
   },
   image: {
