@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import sharp from 'sharp';
 import matter from 'gray-matter';
 
 async function copyImages() {
@@ -56,14 +55,12 @@ async function copyImages() {
             const destinationPath = path.join(projectFolderPath, imageFileName);
 
             try {
-                // Use sharp to process and save the image
-                await sharp(localImagePath)
-                    .jpeg({ quality: 80 })
-                    .toFile(destinationPath);
+                // Copy the image without processing
+                fs.copyFileSync(localImagePath, destinationPath);
 
-                console.log(`Copied and optimized ${localImagePath} to ${destinationPath}`);
+                console.log(`Copied ${localImagePath} to ${destinationPath}`);
             } catch (error) {
-                console.error(`Error processing image ${localImagePath}:`, error);
+                console.error(`Error copying image ${localImagePath}:`, error);
             }
         }
     }
