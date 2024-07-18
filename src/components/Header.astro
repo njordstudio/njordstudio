@@ -1,8 +1,9 @@
 ---
-import '../style/main.css';
+import '../style/main.scss';
 import Navigation from '../components/Navigation.astro';
 import Hamburger from './Hamburger.astro';
 import nsLogo from "/src/assets/logo/NS_logo_white.svg";
+import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
 ---
 
 <html lang="en">
@@ -50,6 +51,8 @@ import nsLogo from "/src/assets/logo/NS_logo_white.svg";
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+        <Lightbox />
 	</head>
 
     <body class="styledScrollbar">

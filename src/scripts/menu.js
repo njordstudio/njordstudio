@@ -16,53 +16,53 @@ document.querySelector('.hamburger').addEventListener('click', () => {
 
 
 // Animation for article items
-if (document.querySelector('.articleItem')) {
+// if (document.querySelector('.articleItem')) {
 
 
-    gsap.set(".articleItem", { autoAlpha: 1 });
+//     gsap.set(".articleItem", { autoAlpha: 1 });
 
-    gsap.from('.articleItem', {
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        stagger: 0.2,
-        ease: 'power2.out',
-        delay: 0.3
-    });
+//     gsap.from('.articleItem', {
+//         opacity: 0,
+//         y: 50,
+//         duration: 0.5,
+//         stagger: 0.2,
+//         ease: 'power2.out',
+//         delay: 0.3
+//     });
 
-    document.querySelectorAll('.articleItem').forEach(item => {
-        item.addEventListener('mouseover', () => {
-            item.querySelector('.articleImg').style.height = '0';
-            item.querySelector('.articleDescription').style.display = 'block';
-            item.querySelector('.articleAuthor').style.display = 'none'; // Add this line to hide articleAuthor
-            item.querySelector('.articleImg').style.transition = 'height 0.2s'; // Add this line for smooth transition
-        });
+//     document.querySelectorAll('.articleItem').forEach(item => {
+//         item.addEventListener('mouseover', () => {
+//             item.querySelector('.articleImg').style.height = '0';
+//             item.querySelector('.articleDescription').style.display = 'block';
+//             item.querySelector('.articleAuthor').style.display = 'none'; // Add this line to hide articleAuthor
+//             item.querySelector('.articleImg').style.transition = 'height 0.2s'; // Add this line for smooth transition
+//         });
 
-        item.addEventListener('mouseout', () => {
-            item.querySelector('.articleImg').style.height = '150px';
-            item.querySelector('.articleDescription').style.display = 'none';
-            item.querySelector('.articleAuthor').style.display = 'block'; // Add this line to show articleAuthor
-            item.querySelector('.articleImg').style.transition = 'height 0.2s'; // Add this line for smooth transition
-        });
-    });
-}
+//         item.addEventListener('mouseout', () => {
+//             item.querySelector('.articleImg').style.height = '150px';
+//             item.querySelector('.articleDescription').style.display = 'none';
+//             item.querySelector('.articleAuthor').style.display = 'block'; // Add this line to show articleAuthor
+//             item.querySelector('.articleImg').style.transition = 'height 0.2s'; // Add this line for smooth transition
+//         });
+//     });
+// }
 
 // Transition between pages
-document.querySelectorAll('.articleItem').forEach(link => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const articleItem = link.closest('.articleItem');
-        gsap.to(articleItem, {
-            opacity: 0,
-            duration: 0.2,
-            scale: 0.9,
-            ease: 'power2.inOut',
-            onComplete: () => {
-                window.location.href = link.href;
-            }
-        });
-    });
-});
+// document.querySelectorAll('.articleItem').forEach(link => {
+//     link.addEventListener('click', (event) => {
+//         event.preventDefault();
+//         const articleItem = link.closest('.articleItem');
+//         gsap.to(articleItem, {
+//             opacity: 0,
+//             duration: 0.2,
+//             scale: 0.9,
+//             ease: 'power2.inOut',
+//             onComplete: () => {
+//                 window.location.href = link.href;
+//             }
+//         });
+//     });
+// });
 
 // Smooth transition for hamburger menu
 document.querySelector('.hamburger').addEventListener('click', () => {

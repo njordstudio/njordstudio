@@ -5,7 +5,11 @@
     --light: #b7b7b2;
     --white: #fcfafa;
     --off-white: #f7f5f2;
-    --pop: #c9be8c;
+    /* --pop: #5A7E8E; Steel Blue */
+    /* --pop: #FF6F61; Coral */
+    /* --pop: #F2AE8A; Peach  */
+    /* --pop: #C59790; Dusty Coral */
+    --pop: #c7bba2; /* Modern Navy */
     --font-heading: "Mulish", sans-serif;
     --font-text: "Mulish", sans-serif;
     --small-font: 0.75rem;
@@ -172,7 +176,7 @@ footer h3 {
 
 footer p:hover,
 footer a:hover {
-    color: var(--dark);
+    color: var(--pop);
 }
 
 .footerContainer {
@@ -305,7 +309,7 @@ img {
 
 .navigation a:hover,
 .navigation a:focus {
-    color: var(--dark);
+    color: var(--pop);
 }
 
 .expanded {
@@ -489,14 +493,14 @@ img {
 }
 
 .articleItem {
-    opacity: 0;
+    /* opacity: 0; */
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
     width: calc(33% - 1rem);
     height: 320px;
-    /* border-radius: 0.25rem; */
+    border-radius: 0.25rem;
     background: var(--off-white);
     border-bottom: none;
 }
@@ -524,10 +528,10 @@ img {
 
 .articleItem:hover,
 .articleItem:active {
-    background-color: var(--dark);
+    background-color: var(--pop);
 
     h2 {
-        color: var(--pop);
+        color: var(--white);
     }
 
     p {
@@ -557,7 +561,7 @@ img {
 }
 
 .articleDescription {
-    display: none;
+    /* display: none; */
 }
 
 .center {
@@ -616,6 +620,11 @@ figure p {
     margin-block-start: 0;
     margin-block-end: 0;
     height: fit-content;
+}
+
+.portal figcaption {
+    position: absolute;
+    bottom: 10%;
 }
 
 .stories figcaption {
