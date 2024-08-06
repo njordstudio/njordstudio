@@ -23,7 +23,7 @@ export default defineConfig({
       },
     },
     ssr: {
-      noExternal: ['sharp']
+      noExternal: ['sharp'] //  included in the server-side rendering (SSR) build process
     }
   },
   image: {
