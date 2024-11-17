@@ -135,6 +135,17 @@ img {
     }
 }
 
+.post-details {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    max-width: 60%;
+
+    @media screen and (max-width: 720px) {
+        max-width: 100%;
+    }
+}
+
 /* Header */
 header {
     background-color: var(--black);
@@ -638,5 +649,5 @@ figure {
     text-align: center;
     color: var(--light);
     padding: 2px 0 4px 0;
-    font-size: var(--small-font);
+    font-size: var(--normal-font);
 }
