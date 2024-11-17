@@ -8,6 +8,7 @@
     --pop: #c7bba2; /* Modern Navy */
     --font-heading: "Mulish", sans-serif;
     --font-text: "Mulish", sans-serif;
+    --normal-font: 1.125rem;
     --small-font: 0.75rem;
 }
 
@@ -65,14 +66,14 @@ h3 {
 p {
     font-family: var(--font-text);
     font-optical-sizing: auto;
-    font-size: 1.25rem;
+    font-size: var(--normal-font);
     text-align: left;
     line-height: 1.4;
     letter-spacing: 0.025ch;
     font-weight: 300;
 
     @media screen and (max-width: 768px) {
-        font-size: 1.125rem;
+        font-size: var(--normal-font);
         letter-spacing: 0.025ch;
     }
 }
@@ -84,7 +85,7 @@ a {
     padding-bottom: 1px;
     margin-bottom: 0.5rem;
     font-weight: 300;
-    font-size: 1.125rem;
+    font-size: var(--normal-font);
 
     &:hover,
     &:active {
@@ -99,7 +100,7 @@ a {
 li {
     font-family: var(--font-text);
     font-optical-sizing: auto;
-    font-size: 1.125rem;
+    font-size: var(--normal-font);
     text-align: left;
     line-height: 1.4;
     letter-spacing: 0.025ch;
@@ -169,7 +170,7 @@ footer {
 
     a, p, h1, h2, h3 {
         color: var(--white);
-        font-size: 1rem;
+        font-size: var(--normal-font);
 
         &:hover {
             color: var(--pop);
@@ -231,7 +232,7 @@ footer {
         .storyAuthor,
         .storyDate,
         .storyTags {
-            font-size: 0.85rem;
+            font-size: var(--small-font);
             font-weight: 400;
             font-style: italic;
             height: 1rem;
@@ -265,7 +266,7 @@ footer {
     a {
         padding: 10px 0;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: var(--normal-font);
         font-weight: bold;
         margin-bottom: 0;
         align-content: center;
@@ -422,7 +423,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 1rem;
+    font-size: var(--normal-font);
 }
 
 /* Styled Scrollbar */
@@ -535,7 +536,7 @@ button {
     color: var(--dark);
     text-transform: uppercase;
     font-optical-sizing: auto;
-    font-size: 1.125rem;
+    font-size: var(--normal-font);
     letter-spacing: 0.05ch;
     font-weight: 900;
     border: none;
@@ -553,7 +554,7 @@ button {
 
 /* Figure */
 figure {
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
 
     figcaption {
         text-align: center;
@@ -630,4 +631,12 @@ figure {
 .text-bold,
 .text-bold a {
     font-weight: 900;
+}
+
+.etsy-link,
+.etsy-link a {
+    text-align: center;
+    color: var(--light);
+    padding: 2px 0 4px 0;
+    font-size: var(--small-font);
 }
