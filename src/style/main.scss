@@ -515,6 +515,10 @@ footer {
     text-align: center;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* Tags List */
 .tagsList {
     display: flex;
@@ -621,4 +625,9 @@ figure {
 
 .m-bottom-4 {
     margin-bottom: 4rem;
+}
+
+.text-bold,
+.text-bold a {
+    font-weight: 900;
 }

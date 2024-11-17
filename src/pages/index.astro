@@ -4,19 +4,20 @@ import { Image } from 'astro:assets';
 import startImg from '../../src/images/project_09/Njord_Studio_Jensen_01.jpg';
 
 const title = "Welcome to NJORD!";
+
+// Fetch all posts
+const allPosts = await Astro.glob('./posts/*.mdx');
+
+// Sort posts by date and get the latest 3
+const latestPosts = allPosts
+  .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+  .slice(0, 3);
 ---
 
 <BaseLayout title={title}>
 
     <div class="content">
 
-        <p>
-            3D/CG (Computer-generated) imagery is everywhere in today's world, on our TV screens, social media feeds and print media. Why is that? It's fast to create, more precise and often cheaper than photography.
-            <br />
-            <br />
-            I'm Fredrik, a freelance 3D artist and web developer, driven by a passion for bringing my client's visions to life.
-            With extensive experience in CG imagery and web development, I combine artistic creativity with technical expertise to deliver exceptional results tailored to your needs.
-        </p>
 
         <figure data-lightbox="true">
             <Image
@@ -28,13 +29,37 @@ const title = "Welcome to NJORD!";
             <figcaption>Full CG image for Jensen @ R3.</figcaption>
         </figure>
 
-        <h2 class="center">Services</h2>
+        <p class="m-top-2 m-bottom-4">
+            Computer-generated imagery is everywhere in today's world, on our TV screens, social media feeds and print media. Why is that? It's beacuse it's fast to create, more precise and often cheaper than the alternatives.
+            <br />
+            <br />
+            At NJORD, we provide consulting and freelancing services in 3D visuals and web development, helping clients bring their ideas to life through captivating visuals and seamless digital solutions. Our mission is to collaborate with clients to create interactive experiences that engage audiences and deliver impactful results.
+        </p>
 
-            <h3>3D/CG Images:</h3>
-            <p>With over a decade of experience in the field, I offer comprehensive services in 3D imagery, from initial concept and modeling to detailed texturing and high-quality rendering. Whether you need photorealistic visuals or stylized 3D art, I can bring your ideas to life with precision and creativity.</p>
+        <section class="latest-posts m-bottom-4">
 
-            <h3>Web Development:</h3>
-            <p>Specializing in ES6 JavaScript, I provide advanced web development support, integrating seamlessly with any team. My skills in modern JavaScript techniques ensure your web projects are both dynamic and efficient. For more on my expertise, check out the <a href="/about/">About page.</a></p>
+            <h2>Latest Projects</h2>
+
+            <div class="articlesList content">
+              {latestPosts.map((post, index) => (
+                <a href={post.url} class="articleItem" key={index}>
+                  <img
+                    class="img"
+                    src={post.frontmatter.image.url}
+                    alt={post.frontmatter.image.alt}
+                  />
+                  <div class="articleItemInfo">
+                    <h2>{post.frontmatter.title}</h2>
+                    <p class="articleDescription">{post.frontmatter.description}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+            <h3 class="view-all text-center text-bold">
+              <a href="/projects/" class="view-all-button">View All Projects</a>
+            </h3>
+          </section>
+
 
     </div>
 
